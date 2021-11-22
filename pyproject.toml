@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fictional-octo-engine"
-version = "0.1.0"
+version = "0.2.0"
 description = "A simple Flask Hello World application"
 authors = ["Leandro E. Colombo Viña <lecovi@ac.python.org.ar>"]
 license = "GPL-3.0-or-later"
