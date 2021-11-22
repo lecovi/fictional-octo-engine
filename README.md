@@ -1,4 +1,5 @@
-# fuzzy-lamp
+# fictional-octo-engine
+
 A Flask Hello World example
 
 ## Prerequisites
