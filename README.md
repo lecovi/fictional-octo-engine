@@ -24,14 +24,16 @@ cp env.dist .env
 Build docker image.
 
 ```bash
-docker build . -t fictional-octo-engine:0.3.0
+docker-compose build
 ```
 
-Run the app using `docker` instead of `poetry`.
+Run the app using `docker-compose` instead of `docker`.
 
 ```bash
-docker run --rm --name fictional-octo-engine -v $PWD:/usr/src/app -p 5000:5000 fictional-octo-engine:0.3.0
+docker-compose up
 ```
+
+> You can still run the app using `docker run` if you want.
 
 ### Running locally
 

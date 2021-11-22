@@ -12,3 +12,7 @@
 
 - Updates Python version to 3.10
 - Adds CHANGELOG.md
+
+## v0.4.0
+
+- Adds `docker-compose.yml`
