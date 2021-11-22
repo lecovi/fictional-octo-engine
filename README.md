@@ -1,11 +1,11 @@
-# fuzzy-lamp
-A Flask Hello World example
+# fictional-octo-engine
+
+A Flask Hello World example with Docker.
 
 ## Prerequisites
 
 This application installs and runs with [poetry](https://python-poetry.org/).
 If you don't have it, please follow [Installation Guide](https://python-poetry.org/docs/#installation).
-You also can install it running the following command: `python3 -m pip install poetry --user`
 
 ## Install
 
@@ -25,4 +25,18 @@ The run the Flask Development server using `poetry`
 
 ```bash
 poetry run flask run --host=0.0.0.0
+```
+
+### Docker
+
+Build docker image.
+
+```bash
+docker build . -t fictional-octo-engine:0.2.0
+```
+
+Run the app using `docker` instead of `poetry`.
+
+```bash
+docker run --rm --name fictional-octo-engine -v $PWD:/usr/src/app -p 5000:5000 fictional-octo-engine:0.2.0
 ```
