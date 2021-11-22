@@ -1,12 +1,16 @@
 version: '3.8'
 
 services:
+
     app:
         build: .
-        image: fictional-octo-engine:${VERSION}
+        image: fictional-octo-engine:${APP_VERSION}
         env_file:
             - .env
         volumes:
             - .:/usr/src/app
         ports:
             - "5000:5000"
+
+    redis:
+      image: redis:6-alpine
