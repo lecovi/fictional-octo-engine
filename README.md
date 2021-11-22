@@ -21,22 +21,22 @@ Copy environment variables from `env.dist`
 cp env.dist .env
 ```
 
-The run the Flask Development server using `poetry`
-
-```bash
-poetry run flask run --host=0.0.0.0
-```
-
-### Docker
-
 Build docker image.
 
 ```bash
-docker build . -t fictional-octo-engine:0.2.0
+docker build . -t fictional-octo-engine:0.3.0
 ```
 
 Run the app using `docker` instead of `poetry`.
 
 ```bash
-docker run --rm --name fictional-octo-engine -v $PWD:/usr/src/app -p 5000:5000 fictional-octo-engine:0.2.0
+docker run --rm --name fictional-octo-engine -v $PWD:/usr/src/app -p 5000:5000 fictional-octo-engine:0.3.0
+```
+
+### Running locally
+
+The run the Flask Development server using `poetry`
+
+```bash
+poetry run flask run --host=0.0.0.0
 ```
