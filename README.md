@@ -6,6 +6,7 @@ A Flask Hello World example
 
 This application installs and runs with [poetry](https://python-poetry.org/).
 If you don't have it, please follow [Installation Guide](https://python-poetry.org/docs/#installation).
+
 You also can install it running the following command: `python3 -m pip install poetry --user`
 
 ## Install
