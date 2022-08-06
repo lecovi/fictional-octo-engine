@@ -1,4 +1,23 @@
 [[package]]
+name = "certifi"
+version = "2022.6.15"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "charset-normalizer"
+version = "2.1.0"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "dev"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.extras]
+unicode_backport = ["unicodedata2"]
+
+[[package]]
 name = "click"
 version = "8.1.3"
 description = "Composable command line interface toolkit"
@@ -15,6 +34,25 @@ name = "colorama"
 version = "0.4.5"
 description = "Cross-platform colored terminal text."
 category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "commonmark"
+version = "0.9.1"
+description = "Python parser for the CommonMark Markdown spec"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.extras]
+test = ["flake8 (==3.7.8)", "hypothesis (==3.55.3)"]
+
+[[package]]
+name = "defusedxml"
+version = "0.7.1"
+description = "XML bomb protection for Python stdlib modules"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -36,6 +74,37 @@ Werkzeug = ">=2.2.0"
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+name = "httpie"
+version = "3.2.1"
+description = "HTTPie: modern, user-friendly command-line HTTP client for the API era."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+charset-normalizer = ">=2.0.0"
+colorama = {version = ">=0.2.4", markers = "sys_platform == \"win32\""}
+defusedxml = ">=0.6.0"
+importlib-metadata = {version = ">=1.4.0", markers = "python_version < \"3.8\""}
+multidict = ">=4.7.0"
+Pygments = ">=2.5.2"
+requests = {version = ">=2.22.0", extras = ["socks"]}
+requests-toolbelt = ">=0.9.1"
+rich = ">=9.10.0"
+
+[package.extras]
+dev = ["pytest", "pytest-httpbin (>=0.0.6)", "pytest-lazy-fixture (>=0.0.6)", "responses", "pytest-mock", "werkzeug (<2.1.0)", "flake8", "flake8-comprehensions", "flake8-deprecated", "flake8-mutable", "flake8-tuple", "pyopenssl", "pytest-cov", "pyyaml", "twine", "wheel", "jinja2"]
+test = ["pytest", "pytest-httpbin (>=0.0.6)", "pytest-lazy-fixture (>=0.0.6)", "responses", "pytest-mock", "werkzeug (<2.1.0)"]
+
+[[package]]
+name = "idna"
+version = "3.3"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "dev"
+optional = false
+python-versions = ">=3.5"
 
 [[package]]
 name = "importlib-metadata"
@@ -85,6 +154,30 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "multidict"
+version = "6.0.2"
+description = "multidict implementation"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "pygments"
+version = "2.12.0"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "pysocks"
+version = "1.7.1"
+description = "A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "python-dotenv"
 version = "0.20.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -96,12 +189,71 @@ python-versions = ">=3.5"
 cli = ["click (>=5.0)"]
 
 [[package]]
+name = "requests"
+version = "2.28.1"
+description = "Python HTTP for Humans."
+category = "dev"
+optional = false
+python-versions = ">=3.7, <4"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<3"
+idna = ">=2.5,<4"
+PySocks = {version = ">=1.5.6,<1.5.7 || >1.5.7", optional = true, markers = "extra == \"socks\""}
+urllib3 = ">=1.21.1,<1.27"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "requests-toolbelt"
+version = "0.9.1"
+description = "A utility belt for advanced users of python-requests"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+requests = ">=2.0.1,<3.0.0"
+
+[[package]]
+name = "rich"
+version = "12.5.1"
+description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+category = "dev"
+optional = false
+python-versions = ">=3.6.3,<4.0.0"
+
+[package.dependencies]
+commonmark = ">=0.9.0,<0.10.0"
+pygments = ">=2.6.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.9\""}
+
+[package.extras]
+jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.3.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "urllib3"
+version = "1.26.11"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "werkzeug"
@@ -132,9 +284,17 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "07e00c7511a2b42136114c22718fdd994e1b0321191ab0136f82ab26bad9e035"
+content-hash = "ea4eb273fc46ffb97a5a5a625edebe4371eece00f134e0612ff027929ec3bba5"
 
 [metadata.files]
+certifi = [
+    {file = "certifi-2022.6.15-py3-none-any.whl", hash = "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"},
+    {file = "certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
+]
+charset-normalizer = [
+    {file = "charset-normalizer-2.1.0.tar.gz", hash = "sha256:575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"},
+    {file = "charset_normalizer-2.1.0-py3-none-any.whl", hash = "sha256:5189b6f22b01957427f35b6a08d9a0bc45b46d3788ef5a92e978433c7a35f8a5"},
+]
 click = [
     {file = "click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
     {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
@@ -143,7 +303,20 @@ colorama = [
     {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
     {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
 ]
+commonmark = [
+    {file = "commonmark-0.9.1-py2.py3-none-any.whl", hash = "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"},
+    {file = "commonmark-0.9.1.tar.gz", hash = "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60"},
+]
+defusedxml = [
+    {file = "defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"},
+    {file = "defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69"},
+]
 flask = []
+httpie = []
+idna = [
+    {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
+    {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
+]
 importlib-metadata = []
 itsdangerous = []
 jinja2 = [
@@ -192,7 +365,20 @@ markupsafe = [
     {file = "MarkupSafe-2.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:46d00d6cfecdde84d40e572d63735ef81423ad31184100411e6e3388d405e247"},
     {file = "MarkupSafe-2.1.1.tar.gz", hash = "sha256:7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"},
 ]
+multidict = []
+pygments = [
+    {file = "Pygments-2.12.0-py3-none-any.whl", hash = "sha256:dc9c10fb40944260f6ed4c688ece0cd2048414940f1cea51b8b226318411c519"},
+    {file = "Pygments-2.12.0.tar.gz", hash = "sha256:5eb116118f9612ff1ee89ac96437bb6b49e8f04d8a13b514ba26f620208e26eb"},
+]
+pysocks = []
 python-dotenv = []
+requests = [
+    {file = "requests-2.28.1-py3-none-any.whl", hash = "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"},
+    {file = "requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"},
+]
+requests-toolbelt = []
+rich = []
 typing-extensions = []
+urllib3 = []
 werkzeug = []
 zipp = []
