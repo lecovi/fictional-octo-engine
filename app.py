@@ -34,3 +34,16 @@ def hello_world():
     return (
         f'Hello, World! from {name} v{version}'
     )
+
+@app.route('/redis/<key>')
+def values(key):
+    value = redis_client.get(key)
+
+    if value is not None:
+        value = value.decode()
+    else:
+        return f'Not found value for "{key}" in Redis'
+
+    return (
+        f'From Redis {key}={value}'
+    )
