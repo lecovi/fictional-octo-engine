@@ -21,3 +21,7 @@
 
 - Adds `Redis`
 - Adds `/redis/{{key}}` endpoint
+
+## v0.6.0
+
+- Adds `poetry` inside Docker
