@@ -24,13 +24,13 @@ cp env.dist .env
 Build docker image.
 
 ```bash
-docker-compose build
+docker compose build
 ```
 
-Run the app using `docker-compose` instead of `docker`.
+Run the app using `docker compose` instead of `docker`.
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 > You can still run the app using `docker run` if you want.
