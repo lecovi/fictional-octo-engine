@@ -27,7 +27,7 @@ Build docker image.
 docker compose build
 ```
 
-Run the app using `docker-compose` instead of `docker`.
+Run the app using `docker compose` instead of `docker`.
 
 ```bash
 docker compose up
