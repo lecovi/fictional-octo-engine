@@ -36,7 +36,7 @@ suggesting me when I was creating this repository :rofl:.
 
 ## v0.1.0 - Simple Flask App with Poetry
 
-A little bit more complex than the [https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application](minimal application from official docs).
+A little bit more complex than the [minimal application from official docs](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
 This version uses a hello-world like approach. Reads values from ENVVARS and uses them
 on the response.
 
