@@ -1,15 +1,12 @@
-import os
 from dotenv import load_dotenv
 from flask import Flask
 
 from .extensions import redis_client
-from .redis.views import redis as redis_bp
+from .redis.views import redis_bp
 from .home.views import home as home_bp
 
 
 load_dotenv()
-APP_VERSION = os.environ["APP_VERSION"]
-APP_NAME = os.environ["APP_NAME"]
 
 ACTIVE_ENDPOINTS = (
     (home_bp, "/"),

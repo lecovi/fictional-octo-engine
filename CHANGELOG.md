@@ -29,3 +29,7 @@
 ## v0.7.0
 
 - Adds Blueprints with better Flask project structure
+
+## v0.8.0
+
+- Adds `pytest`
