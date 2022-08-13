@@ -1,35 +1,38 @@
 # fictional-octo-engine
 
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 A simple Flask application for demo Docker and its usage in a Python environment.
 
 Every version is built on top of the previous one. Keep reading to get more details.
 
-## Why this is called "fictional-octo-engine"?
+## :thinking: Why this is called "fictional-octo-engine"?
 
 We know that naming things is hard. So, to be honest with you, this app is called like
 that because I didn't wanna think so much, so I took the name that Github was
 suggesting me when I was creating this repository :rofl:.
 
-## Summary
+## :checkered_flag: Summary
 
-- :octocat: [v0.1.0 - App with Poetry:](/lecovi/fictional-octo-engine/feature/v0.1.0)
+- :octocat: [v0.1.0 - App with Poetry](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.1.0)
     - :information_source: [details](#v010---simple-flask-app-with-poetry)
-- :octocat: [v0.2.0 - App with Poetry and Docker:](/lecovi/fictional-octo-engine/feature/v0.2.0)
+- :octocat: [v0.2.0 - App with Poetry and Docker](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.2.0)
     - :information_source: [details](#v020---app-with-poetry-and-docker)
-- :octocat: [v0.3.0 - App with another Python Version:](/lecovi/fictional-octo-engine/feature/v0.3.0)
+- :octocat: [v0.3.0 - App with another Python Version](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.3.0)
     - :information_source: [details](#v030---app-with-another-python-version)
-- :octocat: [v0.4.0 - App with Poetry and Docker Compose:](/lecovi/fictional-octo-engine/feature/v0.4.0)
+- :octocat: [v0.4.0 - App with Poetry and Docker Compose](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.4.0)
     - :information_source: [details](#v040---app-with-poetry-and-docker-compose)
-- :octocat: [v0.5.0 - App with a Redis service:](/lecovi/fictional-octo-engine/feature/v0.5.0)
+- :octocat: [v0.5.0 - App with a Redis service](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.5.0)
     - :information_source: [details](#v050---app-with-a-redis-service)
-- :octocat: [v0.6.0 - App with Poetry insider Docker:](/lecovi/fictional-octo-engine/feature/v0.6.0)
+- :octocat: [v0.6.0 - App with Poetry insider Docker](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.6.0)
     - :information_source: [details](#v060---app-with-poetry-inside-docker)
-- :octocat: [v0.7.0 - App with better project structure:](/lecovi/fictional-octo-engine/feature/v0.7.0)
+- :octocat: [v0.7.0 - App with better project structure](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.7.0)
     - :information_source: [details](#v070---app-with-better-project-structure)
-- :octocat: [v0.8.0 - App with tests:](/lecovi/fictional-octo-engine/feature/v0.8.0)
+- :octocat: [v0.8.0 - App with tests](https://github.com/lecovi/fictional-octo-engine/tree/feature/v0.8.0)
     - :information_source: [details](#v080---app-with-tests)
 
-# Versions
+# :mag: Versions
 
 ## v0.1.0 - Simple Flask App with Poetry
 
