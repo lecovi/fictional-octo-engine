@@ -37,16 +37,20 @@ suggesting me when I was creating this repository :rofl:.
 ## v0.1.0 - Simple Flask App with Poetry
 
 A little bit more complex than the [minimal application from official docs](https://flask.palletsprojects.com/en/2.2.x/quickstart/#a-minimal-application).
-This version uses a hello-world like approach. Reads values from ENVVARS and uses them
-on the response.
+
+This version uses a *hello-world like* approach. Reads values from ENVVARS and uses them
+in the response.
 
 ## v0.2.0 - App with Poetry and Docker
 
 This version has the same functionality as before. It only adds a [Dockerfile](https://docs.docker.com/engine/reference/builder/) to run the
 application with [Docker](https://docs.docker.com/get-started/).
-Before running your app with a docker container, you have to build your Docker Image.
+
+Before running your app with a docker container you have to build your Docker Image.
 The docker image uses an official Python Docker Image. And the official Python Docker
-Image doesn't have poetry support. That's why there is a `requirements.txt` file. 
+Image doesn't have poetry support. 
+
+That's why there is a `requirements.txt` file. 
 The `requirements.txt` file was exported with `poetry`: 
 
 ```bash
@@ -55,13 +59,14 @@ $ poetry export --format requirements.txt --without-hashes --output requirements
 
 We use `--without-hashes` flag to avoid problems with some packages that may not
 provide a hash to check. 
+
 We are able to run this version using `poetry` or `docker`. 
 
 ## v0.3.0 - App with another Python Version
 
 Now, using Docker, it's pretty easy to change something like the Python version that we
 use to run our app. There is no need to install a new python version onto your system.
-That's one of the benefits we have for using Docker containers.
+That's one of the benefits we have when using Docker containers.
 We can easily use a python release candidate version and check if everything will work
 fine with the new incoming release. 
 
@@ -110,7 +115,8 @@ files belong to the `root` user. That's because inside the docker container the 
 user is `root`. 
 And in a normal workflow if we add dependencies with `poetry` to have them installed 
 inside our docker container we need to export them into a `requirements.txt` file. 
-So, let's make a simple change here: install `poetry` and change to a non-priviled user.
+So, let's make a simple change here: install `poetry` and change to a non-priviled user
+inside our docker container.
 
 ## v0.7.0 - App with better project structure
 
