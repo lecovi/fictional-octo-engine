@@ -25,3 +25,7 @@
 ## v0.6.0
 
 - Adds `poetry` inside Docker
+
+## v0.7.0
+
+- Adds Blueprints with better Flask project structure
