@@ -13,6 +13,7 @@ flask-redis = "^0.4.0"
 Flask-Login = "^0.6.2"
 oauthlib = "^3.2.2"
 flask-sqlalchemy = "^3.0.2"
+pyOpenSSL = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
 httpie = "^3.2.1"
