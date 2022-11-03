@@ -3,16 +3,16 @@ FROM python:3.10-alpine
 # Install curl and dependencies needed for poetry
 RUN apk add --update curl
 RUN apk add --update g++
+RUN apk add --update libffi-dev
 RUN rm -rf /var/cache/apk/*
 
 # Upgrades pip
 RUN python -m pip install --upgrade pip
 
 # Installs poetry
-RUN curl -sSL \
-    https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | \
-    python -
-ENV PATH /root/.poetry/bin:$PATH
+ENV POETRY_HOME /opt/poetry
+RUN curl -sSL https://install.python-poetry.org | python -
+ENV PATH $POETRY_HOME/bin:$PATH
 
 WORKDIR /usr/src/app
 COPY pyproject.toml .
